@@ -6,8 +6,28 @@
 
     <link rel="stylesheet" href="../css/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" media="screen" charset="utf-8">
+    <style media="screen">
+      #skip-link {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        padding: 8px 20px;
+        color: white;
+        background-color: red;
+        z-index: 9999;
+      }
+
+      #skip-link:focus {
+        top: 0;
+        color: white;
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <a href="#form" id="skip-link">Skip link</a>
+    </nav>
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -37,7 +57,6 @@
 
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-
         <main id="main">
           <h1>Welcome to our first exercise</h1>
 
@@ -122,8 +141,8 @@ embed,
                 <option>Black</option>
               </select>
               <input type="checkbox"> Remember me
-              <div class="btn btn-default">Cancel</div>
-              <div class="btn btn-primary">Submit</div>
+              <button type="reset" class="btn btn-default">Cancel</button>
+              <input type="submit" value="Submit" class="btn btn-primary">
             </fieldset>
           </form>
         </main>
